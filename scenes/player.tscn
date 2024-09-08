@@ -414,19 +414,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xm7eu"]
-size = Vector2(11, 19)
+size = Vector2(11, 8)
 
 [node name="player" type="CharacterBody2D"]
-z_index = 5
+y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_owywu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_jubr1")
-animation = &"front_idle"
+animation = &"side_walk"
 autoplay = "front_idle"
-frame_progress = 0.993973
+frame_progress = 0.223855
+offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 8.5)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_xm7eu")
